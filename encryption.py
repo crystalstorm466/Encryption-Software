@@ -96,7 +96,7 @@ mode = int(input("What would like to do? 1: Encryption 2: Decryption "))
 if mode == 1:
     
 
-    passchoice = input("Provide the private key you like to use: ")
+    passchoice = input("Provide the password you like to use: ")
     password = open("password.txt", "w")
     password.write(passchoice)
     password.close()
@@ -141,7 +141,7 @@ if mode == 1:
 elif mode ==2:
 
     decrypt(
-        privateKey_file = input("Provide the file name of your private key: ") + ".pem",
+        privateKey_file = input("Provide the file name of your password: ") + ".pem",
         ciphertext = input("Provide the file name of the encrypted text: "),
         password = input("What is your password? "),
     )
