@@ -96,7 +96,7 @@ mode = int(input("What would like to do? 1: Encryption 2: Decryption "))
 if mode == 1:
     
 
-    passchoice = input("Provide the password you like to use: ")
+    passchoice = input("Create a password: ")
     password = open("password.txt", "w")
     password.write(passchoice)
     password.close()
