@@ -97,6 +97,7 @@ if mode == 1:
     
 
     passchoice = input("Create a password: ")
+    # if using spaces use quotes
     password = open("password.txt", "w")
     password.write(passchoice)
     password.close()
@@ -130,9 +131,6 @@ if mode == 1:
 
 
     print(encrypted_pem_private_key.splitlines()[0])
-    # message = input("Please provide the message you would like to encrypt in quotation marks: ")
-    
-    # print("The current message is: ", message)
 
     encrypt(
             message = input("Please provide the message you would like to encrypt in quotation marks. ")
@@ -141,7 +139,7 @@ if mode == 1:
 elif mode ==2:
 
     decrypt(
-        privateKey_file = input("Provide the file name of your password: ") + ".pem",
+        privateKey_file = input("Provide the file name of your private key: ") + ".pem",
         ciphertext = input("Provide the file name of the encrypted text: "),
         password = input("What is your password? "),
     )
